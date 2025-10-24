@@ -1,0 +1,6 @@
+Step,Action,LocatorType,LocatorValue,TestData
+1,open_browser,N/A,https://opensource-demo.orangehrmlive.com/web/index.php/auth/login,
+2,input_text,name,username,Admin
+3,input_text,name,password,admin
+4,click,xpath,//button[@type='submit'],
+5,verify_text,xpath,//div[@class='oxd-alert-content oxd-alert-content--error']/p,Invalid credentials
