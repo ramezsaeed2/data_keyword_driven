@@ -16,5 +16,6 @@ def test_login(data, driver):
 
     if data['expected'] == 'Success':
         assert result, f"Expected success but got failure for {data['username']}"
+        login.click_logout()
     else:
         assert not result, f"Expected failure but got success for {data['username']}"

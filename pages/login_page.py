@@ -10,6 +10,7 @@ class LoginPage:
         self.login_button = (By.XPATH, "//button[@type='submit']")
         self.dashboard_locator = (By.XPATH, "//h6[text()='Dashboard']")
         self.logout_button = (By.XPATH, "//a[text()='Logout']")
+        self.userdropdown = (By.XPATH, "//i[contains(@class, 'oxd-userdropdown-icon')]")
 
     def open(self):
         self.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -35,6 +36,9 @@ class LoginPage:
         ).click()
 
     def click_logout(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.userdropdown)
+        ).click()
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.logout_button)
         ).click()
