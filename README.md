@@ -5,6 +5,7 @@
 1.  **Install dependencies:**
     ```bash
     python3 -m venv myenv
+    source myenv/bin/activate
     pip3 install -r requirements.txt
     ```
     (Assuming a `requirements.txt` file exists or will be created with `pytest` and `selenium`.)
