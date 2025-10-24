@@ -1,0 +1,7 @@
+first_name,last_name,expected_status,expected_message
+Ramez,Saeed,success,
+Ali,Mostafa,success,
+Mona,Ahmed,success,
+Kareem,Samir,success,
+,Invalid,failure,Required
+Invalid,,failure,Required

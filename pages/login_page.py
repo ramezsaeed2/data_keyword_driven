@@ -13,6 +13,11 @@ class LoginPage:
     def open(self):
         self.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
+    def login(self, username, password):
+        self.set_username(username)
+        self.set_password(password)
+        self.click_login()
+
     def set_username(self, username):
         WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located(self.username_input)
