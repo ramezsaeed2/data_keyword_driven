@@ -9,6 +9,7 @@ class LoginPage:
         self.password_input = (By.NAME, "password")
         self.login_button = (By.XPATH, "//button[@type='submit']")
         self.dashboard_locator = (By.XPATH, "//h6[text()='Dashboard']")
+        self.logout_button = (By.XPATH, "//a[text()='Logout']")
 
     def open(self):
         self.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
@@ -31,6 +32,11 @@ class LoginPage:
     def click_login(self):
         WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(self.login_button)
+        ).click()
+
+    def click_logout(self):
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(self.logout_button)
         ).click()
 
     def is_login_successful(self):
